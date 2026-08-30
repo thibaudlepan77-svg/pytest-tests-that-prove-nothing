@@ -1,0 +1,20 @@
+============================= test session starts =============================
+platform linux -- Python 3.13, pytest-9.1, pluggy-1.6
+rootdir: /project
+plugins: anyio-4.13.0
+collecting ... collected 1 item
+
+test_typo.py::test_wrong_name ERROR                                      [100%]
+
+=================================== ERRORS ====================================
+______________________ ERROR at setup of test_wrong_name ______________________
+file /test_typo.py, line 1
+  def test_wrong_name(custmer):
+E       fixture 'custmer' not found
+>       available fixtures: anyio_backend, anyio_backend_name, anyio_backend_options, capfd, capfdbinary, caplog, capsys, capsysbinary, capteesys, customer, doctest_namespace, free_tcp_port, free_tcp_port_factory, free_udp_port, free_udp_port_factory, monkeypatch, pytestconfig, record_property, record_testsuite_property, record_xml_attribute, recwarn, subtests, tmp_path, tmp_path_factory, tmpdir, tmpdir_factory
+>       use 'pytest --fixtures [testpath]' for help on them.
+
+test_typo.py:1
+=========================== short test summary info ===========================
+ERROR test_typo.py::test_wrong_name
+============================== 1 error in 0.01s ===============================

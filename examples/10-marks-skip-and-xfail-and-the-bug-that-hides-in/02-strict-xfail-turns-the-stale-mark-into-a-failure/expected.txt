@@ -1,0 +1,14 @@
+============================= test session starts =============================
+platform linux -- Python 3.13, pytest-9.1, pluggy-1.6
+rootdir: /project
+plugins: anyio-4.13.0
+collecting ... collected 1 item
+
+test_marks.py::test_already_fixed FAILED                                 [100%]
+
+================================== FAILURES ===================================
+_____________________________ test_already_fixed ______________________________
+[XPASS(strict)] fixed last week
+=========================== short test summary info ===========================
+FAILED test_marks.py::test_already_fixed - [XPASS(strict)] fixed last week
+============================== 1 failed in 0.01s ==============================

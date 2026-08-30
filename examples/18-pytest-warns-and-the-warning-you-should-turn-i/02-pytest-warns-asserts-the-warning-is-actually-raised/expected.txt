@@ -1,0 +1,22 @@
+============================= test session starts =============================
+platform linux -- Python 3.13, pytest-9.1, pluggy-1.6
+rootdir: /project
+plugins: anyio-4.13.0
+collecting ... collected 2 items
+
+test_warn.py::test_warns PASSED                                          [ 50%]
+test_warn.py::test_new_does_not_warn FAILED                              [100%]
+
+================================== FAILURES ===================================
+___________________________ test_new_does_not_warn ____________________________
+
+    def test_new_does_not_warn():
+>       with pytest.warns(DeprecationWarning):
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E       Failed: DID NOT WARN. No warnings of type (<class 'DeprecationWarning'>,) were emitted.
+E        Emitted warnings: [].
+
+test_warn.py:16: Failed
+=========================== short test summary info ===========================
+FAILED test_warn.py::test_new_does_not_warn - Failed: DID NOT WARN. No warnin...
+========================= 1 failed, 1 passed in 0.01s =========================

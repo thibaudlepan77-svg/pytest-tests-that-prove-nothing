@@ -1,0 +1,15 @@
+============================= test session starts =============================
+platform linux -- Python 3.13, pytest-9.1, pluggy-1.6
+rootdir: /project
+plugins: anyio-4.13.0
+collecting ... collected 1 item
+
+test_warn.py::test_still_works PASSED                                    [100%]
+
+============================== warnings summary ===============================
+test_warn.py::test_still_works
+  /test_warn.py:4: DeprecationWarning: old_api is deprecated
+    warnings.warn('old_api is deprecated', DeprecationWarning)
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+======================== 1 passed, 1 warning in 0.01s =========================

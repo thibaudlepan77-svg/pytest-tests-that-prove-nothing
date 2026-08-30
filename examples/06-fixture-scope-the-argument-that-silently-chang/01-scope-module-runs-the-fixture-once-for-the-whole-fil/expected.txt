@@ -1,0 +1,24 @@
+============================= test session starts =============================
+platform linux -- Python 3.13, pytest-9.1, pluggy-1.6
+rootdir: /project
+plugins: anyio-4.13.0
+collecting ... collected 2 items
+
+test_scope.py::test_a FIXTURE BODY RAN
+PASSED
+test_scope.py::test_b FAILED
+
+================================== FAILURES ===================================
+___________________________________ test_b ____________________________________
+
+counter = {'n': 2}
+
+    def test_b(counter):
+        counter['n'] += 1
+>       assert counter['n'] == 1
+E       assert 2 == 1
+
+test_scope.py:14: AssertionError
+=========================== short test summary info ===========================
+FAILED test_scope.py::test_b - assert 2 == 1
+========================= 1 failed, 1 passed in 0.01s =========================

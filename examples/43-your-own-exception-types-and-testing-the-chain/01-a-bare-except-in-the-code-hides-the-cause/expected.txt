@@ -1,0 +1,25 @@
+============================= test session starts =============================
+platform linux -- Python 3.13, pytest-9.1, pluggy-1.6
+rootdir: /project
+plugins: anyio-4.13.0
+collecting ... collected 2 items
+
+test_loader.py::test_raises_load_error PASSED                            [ 50%]
+test_loader.py::test_keeps_the_cause FAILED                              [100%]
+
+================================== FAILURES ===================================
+____________________________ test_keeps_the_cause _____________________________
+
+    def test_keeps_the_cause():
+        with pytest.raises(LoadError) as info:
+            load('abc')
+>       assert isinstance(info.value.__cause__, ValueError)
+E       AssertionError: assert False
+E        +  where False = isinstance(None, ValueError)
+E        +    where None = LoadError('bad row').__cause__
+E        +      where LoadError('bad row') = <ExceptionInfo LoadError('bad row') tblen=2>.value
+
+test_loader.py:11: AssertionError
+=========================== short test summary info ===========================
+FAILED test_loader.py::test_keeps_the_cause - AssertionError: assert False
+========================= 1 failed, 1 passed in 0.01s =========================

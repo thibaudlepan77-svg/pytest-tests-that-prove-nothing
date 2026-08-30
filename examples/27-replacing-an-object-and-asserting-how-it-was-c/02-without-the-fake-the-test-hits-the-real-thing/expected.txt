@@ -1,0 +1,30 @@
+============================= test session starts =============================
+platform linux -- Python 3.13, pytest-9.1, pluggy-1.6
+rootdir: /project
+plugins: anyio-4.13.0
+collected 1 item
+
+test_signup.py F                                                         [100%]
+
+================================== FAILURES ===================================
+________________________________ test_no_fake _________________________________
+
+    def test_no_fake():
+>       signup.register('ada@example.com')
+
+test_signup.py:4: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+signup.py:4: in register
+    mailer.send(email, 'Welcome')
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+to = 'ada@example.com', subject = 'Welcome'
+
+    def send(to, subject):
+>       raise RuntimeError('this would really send an email')
+E       RuntimeError: this would really send an email
+
+mailer.py:2: RuntimeError
+=========================== short test summary info ===========================
+FAILED test_signup.py::test_no_fake - RuntimeError: this would really send an...
+============================== 1 failed in 0.01s ==============================

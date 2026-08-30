@@ -1,0 +1,29 @@
+============================= test session starts =============================
+platform linux -- Python 3.13, pytest-9.1, pluggy-1.6
+rootdir: /project
+plugins: anyio-4.13.0
+collecting ... collected 2 items
+
+test_default.py::test_first PASSED                                       [ 50%]
+test_default.py::test_second FAILED                                      [100%]
+
+================================== FAILURES ===================================
+_________________________________ test_second _________________________________
+
+    def test_second():
+>       assert collect(2) == [2]
+E       assert [1, 2] == [2]
+E         
+E         At index 0 diff: 1 != 2
+E         Left contains one more item: 2
+E         
+E         Full diff:
+E           [
+E         +     1,
+E               2,
+E           ]
+
+test_default.py:9: AssertionError
+=========================== short test summary info ===========================
+FAILED test_default.py::test_second - assert [1, 2] == [2]
+========================= 1 failed, 1 passed in 0.01s =========================

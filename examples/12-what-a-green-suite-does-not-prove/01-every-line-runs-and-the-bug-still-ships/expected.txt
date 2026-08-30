@@ -1,0 +1,10 @@
+============================= test session starts =============================
+platform linux -- Python 3.13, pytest-9.1, pluggy-1.6
+rootdir: /project
+plugins: anyio-4.13.0
+collecting ... collected 2 items
+
+test_discount.py::test_member PASSED                                     [ 50%]
+test_discount.py::test_non_member PASSED                                 [100%]
+
+============================== 2 passed in 0.01s ==============================

@@ -1,0 +1,11 @@
+============================= test session starts =============================
+platform linux -- Python 3.13, pytest-9.1, pluggy-1.6
+rootdir: /project
+configfile: pytest.ini
+plugins: anyio-4.13.0
+collecting ... collected 3 items / 1 deselected / 2 selected
+
+test_sel.py::test_fast_one PASSED                                        [ 50%]
+test_sel.py::test_fast_two PASSED                                        [100%]
+
+======================= 2 passed, 1 deselected in 0.01s =======================

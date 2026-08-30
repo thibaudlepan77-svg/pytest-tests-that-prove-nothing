@@ -1,0 +1,16 @@
+============================= test session starts =============================
+platform linux -- Python 3.13, pytest-9.1, pluggy-1.6
+rootdir: /project
+plugins: anyio-4.13.0
+collecting ... collected 3 items
+
+test_marks.py::test_known_bug XFAIL (known bug, ticket 412)              [ 33%]
+test_marks.py::test_already_fixed XPASS (fixed last week, nobody rem...) [ 66%]
+test_marks.py::test_skipped SKIPPED (needs a database)                   [100%]
+
+=================================== XPASSES ===================================
+=========================== short test summary info ===========================
+XFAIL test_marks.py::test_known_bug - known bug, ticket 412
+XPASS test_marks.py::test_already_fixed - fixed last week, nobody removed the mark
+SKIPPED [1] test_marks.py:11: needs a database
+================== 1 skipped, 1 xfailed, 1 xpassed in 0.01s ===================

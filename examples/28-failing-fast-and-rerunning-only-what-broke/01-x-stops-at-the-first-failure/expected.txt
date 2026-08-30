@@ -1,0 +1,21 @@
+============================= test session starts =============================
+platform linux -- Python 3.13, pytest-9.1, pluggy-1.6
+rootdir: /project
+plugins: anyio-4.13.0
+collecting ... collected 4 items
+
+test_fast.py::test_a PASSED                                              [ 25%]
+test_fast.py::test_b FAILED                                              [ 50%]
+
+================================== FAILURES ===================================
+___________________________________ test_b ____________________________________
+
+    def test_b():
+>       assert 1 == 2
+E       assert 1 == 2
+
+test_fast.py:5: AssertionError
+=========================== short test summary info ===========================
+FAILED test_fast.py::test_b - assert 1 == 2
+!!!!!!!!!!!!!!!!!!!!!!!!!! stopping after 1 failures !!!!!!!!!!!!!!!!!!!!!!!!!!
+========================= 1 failed, 1 passed in 0.01s =========================

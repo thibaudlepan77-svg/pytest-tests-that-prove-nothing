@@ -1,0 +1,14 @@
+============================= test session starts =============================
+platform linux -- Python 3.13, pytest-9.1, pluggy-1.6
+rootdir: /project
+plugins: anyio-4.13.0
+collected 1 item
+
+test_tb.py F                                                             [100%]
+
+================================== FAILURES ===================================
+E   ZeroDivisionError: division by zero
+test_tb.py:2: ZeroDivisionError: division by zero
+=========================== short test summary info ===========================
+FAILED test_tb.py::test_divide - ZeroDivisionError: division by zero
+============================== 1 failed in 0.01s ==============================

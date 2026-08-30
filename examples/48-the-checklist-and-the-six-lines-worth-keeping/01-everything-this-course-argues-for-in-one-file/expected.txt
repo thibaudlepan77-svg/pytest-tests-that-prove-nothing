@@ -1,0 +1,14 @@
+============================= test session starts =============================
+platform linux -- Python 3.13, pytest-9.1, pluggy-1.6
+rootdir: /project
+plugins: anyio-4.13.0
+collecting ... collected 6 items
+
+test_account.py::test_withdraw[partial] PASSED                           [ 16%]
+test_account.py::test_withdraw[exact] PASSED                             [ 33%]
+test_account.py::test_withdraw[small-floats] PASSED                      [ 50%]
+test_account.py::test_refuses_too_much PASSED                            [ 66%]
+test_account.py::test_refuses_bad_amount[zero] PASSED                    [ 83%]
+test_account.py::test_refuses_bad_amount[negative] PASSED                [100%]
+
+============================== 6 passed in 0.01s ==============================

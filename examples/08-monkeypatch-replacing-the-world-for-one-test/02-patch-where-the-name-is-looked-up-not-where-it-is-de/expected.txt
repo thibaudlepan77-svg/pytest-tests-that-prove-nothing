@@ -1,0 +1,26 @@
+============================= test session starts =============================
+platform linux -- Python 3.13, pytest-9.1, pluggy-1.6
+rootdir: /project
+plugins: anyio-4.13.0
+collecting ... collected 2 items
+
+test_patch.py::test_wrong_target FAILED                                  [ 50%]
+test_patch.py::test_right_target PASSED                                  [100%]
+
+================================== FAILURES ===================================
+______________________________ test_wrong_target ______________________________
+
+monkeypatch = <_pytest.monkeypatch.MonkeyPatch object at 0x000002AD35663490>
+
+    def test_wrong_target(monkeypatch):
+        monkeypatch.setattr('clock.now', lambda: 'frozen')
+>       assert report.header() == 'generated at frozen'
+E       AssertionError: assert 'generated at real time' == 'generated at frozen'
+E         
+E         - generated at frozen
+E         + generated at real time
+
+test_patch.py:5: AssertionError
+=========================== short test summary info ===========================
+FAILED test_patch.py::test_wrong_target - AssertionError: assert 'generated a...
+========================= 1 failed, 1 passed in 0.01s =========================

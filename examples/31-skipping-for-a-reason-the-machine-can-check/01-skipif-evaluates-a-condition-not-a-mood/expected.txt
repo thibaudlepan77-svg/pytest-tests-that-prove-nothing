@@ -1,0 +1,12 @@
+============================= test session starts =============================
+platform linux -- Python 3.13, pytest-9.1, pluggy-1.6
+rootdir: /project
+plugins: anyio-4.13.0
+collecting ... collected 2 items
+
+test_skip.py::test_modern PASSED                                         [ 50%]
+test_skip.py::test_legacy SKIPPED (only for Python 3.7 and older)        [100%]
+
+=========================== short test summary info ===========================
+SKIPPED [1] test_skip.py:9: only for Python 3.7 and older
+======================== 1 passed, 1 skipped in 0.01s =========================

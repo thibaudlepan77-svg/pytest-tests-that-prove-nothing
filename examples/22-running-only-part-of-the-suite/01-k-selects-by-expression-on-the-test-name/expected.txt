@@ -1,0 +1,9 @@
+============================= test session starts =============================
+platform linux -- Python 3.13, pytest-9.1, pluggy-1.6
+rootdir: /project
+plugins: anyio-4.13.0
+collecting ... collected 3 items / 2 deselected / 1 selected
+
+test_sel.py::test_login_ok PASSED                                        [100%]
+
+======================= 1 passed, 2 deselected in 0.01s =======================

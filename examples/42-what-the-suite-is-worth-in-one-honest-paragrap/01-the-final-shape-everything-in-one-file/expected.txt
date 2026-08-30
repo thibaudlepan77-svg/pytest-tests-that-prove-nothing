@@ -1,0 +1,13 @@
+============================= test session starts =============================
+platform linux -- Python 3.13, pytest-9.1, pluggy-1.6
+rootdir: /project
+plugins: anyio-4.13.0
+collecting ... collected 5 items
+
+test_stock.py::test_takes_and_returns_remaining PASSED                   [ 20%]
+test_stock.py::test_refuses_more_than_available PASSED                   [ 40%]
+test_stock.py::test_stock_untouched_after_failure PASSED                 [ 60%]
+test_stock.py::test_refuses_bad_quantity[zero] PASSED                    [ 80%]
+test_stock.py::test_refuses_bad_quantity[negative] PASSED                [100%]
+
+============================== 5 passed in 0.01s ==============================

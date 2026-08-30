@@ -1,0 +1,11 @@
+============================= test session starts =============================
+platform linux -- Python 3.13, pytest-9.1, pluggy-1.6
+rootdir: /project
+plugins: anyio-4.13.0
+collecting ... collected 3 items
+
+test_ids.py::test_vat[100-FR-120.0] PASSED                               [ 33%]
+test_ids.py::test_vat[100-DE-119.0] PASSED                               [ 66%]
+test_ids.py::test_vat[100-JP-110.0] PASSED                               [100%]
+
+============================== 3 passed in 0.01s ==============================

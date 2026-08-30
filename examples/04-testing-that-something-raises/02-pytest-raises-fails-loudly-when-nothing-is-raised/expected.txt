@@ -1,0 +1,20 @@
+============================= test session starts =============================
+platform linux -- Python 3.13, pytest-9.1, pluggy-1.6
+rootdir: /project
+plugins: anyio-4.13.0
+collected 1 item
+
+test_raises.py F                                                         [100%]
+
+================================== FAILURES ===================================
+________________________________ test_good_way ________________________________
+
+    def test_good_way():
+>       with pytest.raises(ZeroDivisionError):
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E       Failed: DID NOT RAISE ZeroDivisionError
+
+test_raises.py:9: Failed
+=========================== short test summary info ===========================
+FAILED test_raises.py::test_good_way - Failed: DID NOT RAISE ZeroDivisionError
+============================== 1 failed in 0.01s ==============================

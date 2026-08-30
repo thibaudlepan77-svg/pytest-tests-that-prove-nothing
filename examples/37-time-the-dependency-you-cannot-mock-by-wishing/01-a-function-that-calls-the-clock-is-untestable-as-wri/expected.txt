@@ -1,0 +1,23 @@
+============================= test session starts =============================
+platform linux -- Python 3.13, pytest-9.1, pluggy-1.6
+rootdir: /project
+plugins: anyio-4.13.0
+collecting ... collected 2 items
+
+test_billing.py::test_says_good_morning FAILED                           [ 50%]
+test_billing.py::test_says_good_afternoon PASSED                         [100%]
+
+================================== FAILURES ===================================
+___________________________ test_says_good_morning ____________________________
+
+    def test_says_good_morning():
+>       assert billing.greeting() == 'good morning'
+E       AssertionError: assert 'good afternoon' == 'good morning'
+E         
+E         - good morning
+E         + good afternoon
+
+test_billing.py:4: AssertionError
+=========================== short test summary info ===========================
+FAILED test_billing.py::test_says_good_morning - AssertionError: assert 'good...
+========================= 1 failed, 1 passed in 0.01s =========================

@@ -1,0 +1,21 @@
+============================= test session starts =============================
+platform linux -- Python 3.13, pytest-9.1, pluggy-1.6
+rootdir: /project
+plugins: anyio-4.13.0
+collected 1 item
+
+test_model.py F                                                          [100%]
+
+================================== FAILURES ===================================
+_________________________________ test_equal __________________________________
+
+    def test_equal():
+>       assert Point(1, 2) == Point(1, 2)
+E       assert <model.Point object at 0x000002989D65C050> == <model.Point object at 0x000002989D5D0E10>
+E        +  where <model.Point object at 0x000002989D65C050> = Point(1, 2)
+E        +  and   <model.Point object at 0x000002989D5D0E10> = Point(1, 2)
+
+test_model.py:4: AssertionError
+=========================== short test summary info ===========================
+FAILED test_model.py::test_equal - assert <model.Point object at 0x000002989D...
+============================== 1 failed in 0.01s ==============================

@@ -1,0 +1,18 @@
+============================= test session starts =============================
+platform linux -- Python 3.13, pytest-9.1, pluggy-1.6
+rootdir: /project
+plugins: anyio-4.13.0
+collected 1 item
+
+test_helper.py F                                                         [100%]
+
+================================== FAILURES ===================================
+__________________________________ test_user __________________________________
+test_helper.py:7: in test_user
+    assert_valid({'name': 'Ada', 'credit': -5})
+E   AssertionError: assert -5 >= 0
+E    +  where -5 = <built-in method get of dict object at 0x0000027AF06C6000>('credit', 0)
+E    +    where <built-in method get of dict object at 0x0000027AF06C6000> = {'name': 'Ada', 'credit': -5}.get
+=========================== short test summary info ===========================
+FAILED test_helper.py::test_user - AssertionError: assert -5 >= 0
+============================== 1 failed in 0.01s ==============================

@@ -1,0 +1,23 @@
+============================= test session starts =============================
+platform linux -- Python 3.13, pytest-9.1, pluggy-1.6
+rootdir: /project
+plugins: anyio-4.13.0
+collecting ... collected 2 items
+
+test_raises.py::test_message PASSED                                      [ 50%]
+test_raises.py::test_wrong_message FAILED                                [100%]
+
+================================== FAILURES ===================================
+_____________________________ test_wrong_message ______________________________
+
+    def test_wrong_message():
+>       with pytest.raises(ValueError, match='file not found'):
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E       AssertionError: Regex pattern did not match.
+E         Expected regex: 'file not found'
+E         Actual message: 'unknown format: parquet'
+
+test_raises.py:11: AssertionError
+=========================== short test summary info ===========================
+FAILED test_raises.py::test_wrong_message - AssertionError: Regex pattern did...
+========================= 1 failed, 1 passed in 0.01s =========================

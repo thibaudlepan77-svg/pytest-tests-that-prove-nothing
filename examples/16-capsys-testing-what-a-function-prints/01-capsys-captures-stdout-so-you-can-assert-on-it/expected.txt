@@ -1,0 +1,9 @@
+============================= test session starts =============================
+platform linux -- Python 3.13, pytest-9.1, pluggy-1.6
+rootdir: /project
+plugins: anyio-4.13.0
+collecting ... collected 1 item
+
+test_print.py::test_greet PASSED                                         [100%]
+
+============================== 1 passed in 0.01s ==============================

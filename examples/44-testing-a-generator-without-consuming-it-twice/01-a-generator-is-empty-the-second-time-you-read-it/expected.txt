@@ -1,0 +1,24 @@
+============================= test session starts =============================
+platform linux -- Python 3.13, pytest-9.1, pluggy-1.6
+rootdir: /project
+plugins: anyio-4.13.0
+collected 1 item
+
+test_gen.py F                                                            [100%]
+
+================================== FAILURES ===================================
+_____________________________ test_reads_it_twice _____________________________
+
+    def test_reads_it_twice():
+        g = evens(6)
+        assert list(g) == [0, 2, 4]
+>       assert list(g) == [0, 2, 4]
+E       assert [] == [0, 2, 4]
+E         
+E         Right contains 3 more items, first extra item: 0
+E         Use -v to get more diff
+
+test_gen.py:9: AssertionError
+=========================== short test summary info ===========================
+FAILED test_gen.py::test_reads_it_twice - assert [] == [0, 2, 4]
+============================== 1 failed in 0.01s ==============================

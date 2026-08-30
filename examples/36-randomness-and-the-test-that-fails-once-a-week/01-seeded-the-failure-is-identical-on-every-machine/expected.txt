@@ -1,0 +1,21 @@
+============================= test session starts =============================
+platform linux -- Python 3.13, pytest-9.1, pluggy-1.6
+rootdir: /project
+plugins: anyio-4.13.0
+collected 1 item
+
+test_random.py F                                                         [100%]
+
+================================== FAILURES ===================================
+_____________________________ test_all_below_ten ______________________________
+
+    def test_all_below_ten():
+        random.seed(0)
+>       assert all(x < 10 for x in pick_three())
+E       assert False
+E        +  where False = all(<generator object test_all_below_ten.<locals>.<genexpr> at 0x000001F39C930860>)
+
+test_random.py:8: AssertionError
+=========================== short test summary info ===========================
+FAILED test_random.py::test_all_below_ten - assert False
+============================== 1 failed in 0.01s ==============================

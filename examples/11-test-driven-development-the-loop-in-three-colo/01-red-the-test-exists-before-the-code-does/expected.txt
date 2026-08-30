@@ -1,0 +1,20 @@
+============================= test session starts =============================
+platform linux -- Python 3.13, pytest-9.1, pluggy-1.6
+rootdir: /project
+plugins: anyio-4.13.0
+collected 1 item
+
+test_tdd.py F                                                            [100%]
+
+================================== FAILURES ===================================
+___________________________ test_add_same_currency ____________________________
+
+    def test_add_same_currency():
+>       assert Money(5, 'EUR') + Money(3, 'EUR') == Money(8, 'EUR')
+               ^^^^^^^^^^^^^^^
+E       TypeError: Money() takes no arguments
+
+test_tdd.py:4: TypeError
+=========================== short test summary info ===========================
+FAILED test_tdd.py::test_add_same_currency - TypeError: Money() takes no argu...
+============================== 1 failed in 0.01s ==============================

@@ -1,0 +1,21 @@
+============================= test session starts =============================
+platform linux -- Python 3.13, pytest-9.1, pluggy-1.6
+rootdir: /project
+plugins: anyio-4.13.0
+collecting ... collected 2 items
+
+test_tdd.py::test_add_same_currency PASSED                               [ 50%]
+test_tdd.py::test_refuses_mixed_currency FAILED                          [100%]
+
+================================== FAILURES ===================================
+_________________________ test_refuses_mixed_currency _________________________
+
+    def test_refuses_mixed_currency():
+>       with pytest.raises(ValueError):
+             ^^^^^^^^^^^^^^^^^^^^^^^^^
+E       Failed: DID NOT RAISE ValueError
+
+test_tdd.py:8: Failed
+=========================== short test summary info ===========================
+FAILED test_tdd.py::test_refuses_mixed_currency - Failed: DID NOT RAISE Value...
+========================= 1 failed, 1 passed in 0.01s =========================

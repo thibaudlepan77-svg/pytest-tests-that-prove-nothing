@@ -1,0 +1,24 @@
+============================= test session starts =============================
+platform linux -- Python 3.13, pytest-9.1, pluggy-1.6
+rootdir: /project
+plugins: anyio-4.13.0
+collected 1 item
+
+test_diff.py F                                                           [100%]
+
+================================== FAILURES ===================================
+_________________________________ test_shape __________________________________
+
+    def test_shape():
+>       assert build() == {'id': 1, 'name': 'Ada', 'active': True, 'credit': 100}
+E       AssertionError: assert {'id': 1, 'na... 'credit': 90} == {'id': 1, 'na...'credit': 100}
+E         
+E         Omitting 3 identical items, use -vv to show
+E         Differing items:
+E         {'credit': 90} != {'credit': 100}
+E         Use -v to get more diff
+
+test_diff.py:5: AssertionError
+=========================== short test summary info ===========================
+FAILED test_diff.py::test_shape - AssertionError: assert {'id': 1, 'na... 'cr...
+============================== 1 failed in 0.01s ==============================

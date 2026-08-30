@@ -1,0 +1,20 @@
+============================= test session starts =============================
+platform linux -- Python 3.13, pytest-9.1, pluggy-1.6
+rootdir: /project
+plugins: anyio-4.13.0
+collecting ... collected 1 item
+
+test_first.py::test_add FAILED                                           [100%]
+
+================================== FAILURES ===================================
+__________________________________ test_add ___________________________________
+
+    def test_add():
+>       assert add(2, 3) == 5
+E       assert -1 == 5
+E        +  where -1 = add(2, 3)
+
+test_first.py:5: AssertionError
+=========================== short test summary info ===========================
+FAILED test_first.py::test_add - assert -1 == 5
+============================== 1 failed in 0.01s ==============================

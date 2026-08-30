@@ -1,0 +1,14 @@
+============================= test session starts =============================
+platform linux -- Python 3.13, pytest-9.1, pluggy-1.6
+rootdir: /project
+configfile: pytest.ini
+plugins: anyio-4.13.0
+collected 0 items / 1 error
+
+=================================== ERRORS ====================================
+_______________________ ERROR collecting test_marks.py ________________________
+'slwo' not found in `markers` configuration option
+=========================== short test summary info ===========================
+ERROR test_marks.py - Failed: 'slwo' not found in `markers` configuration option
+!!!!!!!!!!!!!!!!!!! Interrupted: 1 error during collection !!!!!!!!!!!!!!!!!!!!
+============================== 1 error in 0.01s ===============================

@@ -1,0 +1,3 @@
+This example calls the clock, so it passes at some hours and
+fails at others. That is the point of it. The verifier
+reports it as CLOCK and does not count it as a failure.

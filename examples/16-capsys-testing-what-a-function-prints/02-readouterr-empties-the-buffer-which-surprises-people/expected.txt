@@ -1,0 +1,27 @@
+============================= test session starts =============================
+platform linux -- Python 3.13, pytest-9.1, pluggy-1.6
+rootdir: /project
+plugins: anyio-4.13.0
+collecting ... collected 1 item
+
+test_print.py::test_twice FAILED                                         [100%]
+
+================================== FAILURES ===================================
+_________________________________ test_twice __________________________________
+
+capsys = <_pytest.capture.CaptureFixture object at 0x0000028DE472C2F0>
+
+    def test_twice(capsys):
+        greet('Ada')
+        first = capsys.readouterr().out
+        second = capsys.readouterr().out
+        assert first == 'Hello, Ada/n'
+>       assert second == 'Hello, Ada/n'
+E       AssertionError: assert '' == 'Hello, Ada/n'
+E         
+E         - Hello, Ada
+
+test_print.py:9: AssertionError
+=========================== short test summary info ===========================
+FAILED test_print.py::test_twice - AssertionError: assert '' == 'Hello, Ada/n'
+============================== 1 failed in 0.01s ==============================

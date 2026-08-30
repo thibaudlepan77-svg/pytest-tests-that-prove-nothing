@@ -1,0 +1,14 @@
+============================= test session starts =============================
+platform linux -- Python 3.13, pytest-9.1, pluggy-1.6
+rootdir: /project
+plugins: anyio-4.13.0
+collecting ... collected 6 items
+
+test_matrix.py::test_pairs[1-10] PASSED                                  [ 16%]
+test_matrix.py::test_pairs[1-20] PASSED                                  [ 33%]
+test_matrix.py::test_pairs[2-10] PASSED                                  [ 50%]
+test_matrix.py::test_pairs[2-20] PASSED                                  [ 66%]
+test_matrix.py::test_pairs[3-10] PASSED                                  [ 83%]
+test_matrix.py::test_pairs[3-20] PASSED                                  [100%]
+
+============================== 6 passed in 0.01s ==============================
