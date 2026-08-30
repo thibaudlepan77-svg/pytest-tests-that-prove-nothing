@@ -1,7 +1,9 @@
 # session scope, and the setup you only want once
 
-1 examples. Every block below is a real pytest run on pytest 9.1 and
+1 example. Every block below is a real pytest run on pytest 9.1 and
 Python 3.13, captured automatically.
+
+Covered here, `fixture`, `scope`.
 
 ## A session fixture runs once for the whole run
 

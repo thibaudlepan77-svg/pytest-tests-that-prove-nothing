@@ -3,6 +3,8 @@
 2 examples. Every block below is a real pytest run on pytest 9.1 and
 Python 3.13, captured automatically.
 
+Covered here, `readouterr`, `err`, `first`, `second`.
+
 ## capsys captures stdout so you can assert on it
 
 `test_print.py`

@@ -3,6 +3,8 @@
 3 examples. Every block below is a real pytest run on pytest 9.1 and
 Python 3.13, captured automatically.
 
+Covered here, `fixture`, `bucket`.
+
 ## A module level list is shared by every test
 
 `test_leak.py`

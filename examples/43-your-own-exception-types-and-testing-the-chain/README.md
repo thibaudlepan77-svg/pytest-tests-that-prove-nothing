@@ -3,6 +3,8 @@
 2 examples. Every block below is a real pytest run on pytest 9.1 and
 Python 3.13, captured automatically.
 
+Covered here, `raises`.
+
 ## A bare except in the code hides the cause
 
 `loader.py`

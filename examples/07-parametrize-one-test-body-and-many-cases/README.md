@@ -1,7 +1,9 @@
 # Parametrize, one test body and many cases
 
-1 examples. Every block below is a real pytest run on pytest 9.1 and
+1 example. Every block below is a real pytest run on pytest 9.1 and
 Python 3.13, captured automatically.
+
+Covered here, `replace`, `parametrize`, `mark`.
 
 ## Each case is a separate test with its own name
 

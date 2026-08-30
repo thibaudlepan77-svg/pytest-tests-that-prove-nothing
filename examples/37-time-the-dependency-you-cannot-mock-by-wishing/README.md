@@ -3,6 +3,8 @@
 2 examples. Every block below is a real pytest run on pytest 9.1 and
 Python 3.13, captured automatically.
 
+Covered here, `now`, `greeting`.
+
 ## A function that calls the clock is untestable as written
 
 `billing.py`

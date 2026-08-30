@@ -3,6 +3,8 @@
 2 examples. Every block below is a real pytest run on pytest 9.1 and
 Python 3.13, captured automatically.
 
+Covered here, `parametrize`, `rates`, `ids`, `mark`.
+
 ## Without ids, the report shows the raw values
 
 `test_ids.py`

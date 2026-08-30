@@ -1,7 +1,9 @@
 # The checklist, and the six lines worth keeping
 
-1 examples. Every block below is a real pytest run on pytest 9.1 and
+1 example. Every block below is a real pytest run on pytest 9.1 and
 Python 3.13, captured automatically.
+
+Covered here, `parametrize`, `approx`, `raises`, `ids`, `match`, `mark`.
 
 ## Everything this course argues for, in one file
 

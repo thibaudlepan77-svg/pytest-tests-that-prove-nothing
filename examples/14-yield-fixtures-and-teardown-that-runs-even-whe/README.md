@@ -3,6 +3,8 @@
 2 examples. Every block below is a real pytest run on pytest 9.1 and
 Python 3.13, captured automatically.
 
+Covered here, `fixture`.
+
 ## Everything after yield runs when the test is done
 
 `test_yield.py`

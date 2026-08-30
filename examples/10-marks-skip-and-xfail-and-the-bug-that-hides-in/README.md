@@ -3,6 +3,8 @@
 2 examples. Every block below is a real pytest run on pytest 9.1 and
 Python 3.13, captured automatically.
 
+Covered here, `xfail`, `skip`, `reason`, `strict`, `mark`.
+
 ## xfail passes when the test fails, and warns when it does not
 
 `test_marks.py`

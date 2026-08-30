@@ -1,7 +1,9 @@
 # Changing the working directory for one test
 
-1 examples. Every block below is a real pytest run on pytest 9.1 and
+1 example. Every block below is a real pytest run on pytest 9.1 and
 Python 3.13, captured automatically.
+
+Covered here, `exists`, `write_text`, `chdir`, `encoding`.
 
 ## monkeypatch.chdir moves you, and moves you back
 

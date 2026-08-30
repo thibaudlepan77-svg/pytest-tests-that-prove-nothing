@@ -3,6 +3,8 @@
 2 examples. Every block below is a real pytest run on pytest 9.1 and
 Python 3.13, captured automatically.
 
+Covered here, `got`, `want`.
+
 ## pytest shows you which key differs, not just that they differ
 
 `test_diff.py`

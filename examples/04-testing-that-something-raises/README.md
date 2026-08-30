@@ -3,6 +3,8 @@
 3 examples. Every block below is a real pytest run on pytest 9.1 and
 Python 3.13, captured automatically.
 
+Covered here, `raises`, `match`.
+
 ## A try except in a test hides the failure
 
 `test_raises.py`

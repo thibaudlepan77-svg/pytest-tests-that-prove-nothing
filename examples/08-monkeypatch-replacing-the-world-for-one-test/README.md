@@ -3,6 +3,8 @@
 2 examples. Every block below is a real pytest run on pytest 9.1 and
 Python 3.13, captured automatically.
 
+Covered here, `get`, `setenv`, `setattr`, `header`.
+
 ## A test that reads the real environment is not a test
 
 `test_env.py`

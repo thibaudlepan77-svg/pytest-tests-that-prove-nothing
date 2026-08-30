@@ -1,7 +1,9 @@
 # tmp_path, tests that touch the filesystem safely
 
-1 examples. Every block below is a real pytest run on pytest 9.1 and
+1 example. Every block below is a real pytest run on pytest 9.1 and
 Python 3.13, captured automatically.
+
+Covered here, `write_text`, `read_text`, `iterdir`, `encoding`.
 
 ## tmp_path gives every test a private directory
 

@@ -3,6 +3,8 @@
 2 examples. Every block below is a real pytest run on pytest 9.1 and
 Python 3.13, captured automatically.
 
+Covered here, `got`.
+
 ## A generator is empty the second time you read it
 
 `test_gen.py`

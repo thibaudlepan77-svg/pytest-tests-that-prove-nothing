@@ -1,7 +1,9 @@
 # What the suite is worth, in one honest paragraph
 
-1 examples. Every block below is a real pytest run on pytest 9.1 and
+1 example. Every block below is a real pytest run on pytest 9.1 and
 Python 3.13, captured automatically.
+
+Covered here, `get`, `raises`, `parametrize`, `fixture`, `match`, `ids`, `mark`.
 
 ## The final shape, everything in one file
 
