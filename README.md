@@ -25,6 +25,26 @@ cd pytest-tests-that-prove-nothing
 pip install pytest && python verifier.py
 ```
 
+## What the numbers depend on, said plainly
+
+The outputs in this repository were captured by running pytest 9.1 on Python
+3.13 in a Linux sandbox. `verifier.py` reproduces 84 of the 85 there and on the
+machine that assembled the repository.
+
+On a different machine you will very likely see a lower count, and the reason
+is worth knowing. **pytest's report is not a fixed string, it adapts to where
+it runs.** It truncates its summary lines to your terminal width, it prints
+more or fewer assertion introspection lines depending on configuration, and it
+names paths the way your operating system does. None of that changes what the
+examples teach, and none of it can be papered over by a comparison without
+hiding something real.
+
+So the honest instruction is this. Run `verifier.py`, read the DIFFERS lines
+with `-v`, and treat each one as a small fact about your own pytest rather than
+as a broken example. There is deliberately no continuous integration badge on
+this repository, because a green badge would be claiming a portability that
+pytest output does not have.
+
 ## How the check is honest
 
 `verifier.py` re-runs every example and compares the output. It rewrites
