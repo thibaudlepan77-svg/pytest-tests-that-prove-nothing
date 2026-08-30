@@ -19,4 +19,4 @@ jobs:
         with:
           python-version: '3.13'
       - run: pip install pytest==9.1.1
-      - run: python verifier.py
+      - run: python verifier.py -v
