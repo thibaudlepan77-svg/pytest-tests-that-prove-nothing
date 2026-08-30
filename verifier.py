@@ -15,6 +15,7 @@ comparing.
     file paths                        separators differ on Windows
     0x00007f...                       object addresses, never twice the same
     available fixtures: ...           depends on the plugins you installed
+    column alignment                  pytest pads to your terminal width
 
 Everything else is compared as is. That includes every PASSED, FAILED, ERROR,
 xfail, warning and assertion diff, which is the part that carries the lesson.
@@ -39,8 +40,8 @@ VOLATILE = [
 ]
 DUREE = re.compile(r'in \d+\.\d+s')
 SECONDES = re.compile(r'\d+\.\d+s')
-BARRE = re.compile(r'^([=_-]){2,}(.*?){2,}$', re.M)
-BARRE_NUE = re.compile(r'^([=_-]){4,}$', re.M)
+BARRE = re.compile(r'^([=_-])\1{2,}(.*?)\1{2,}$', re.M)
+BARRE_NUE = re.compile(r'^([=_-])\1{4,}$', re.M)
 ADRESSE = re.compile(r'0x[0-9A-Fa-f]{4,}')
 CHEMIN = re.compile(r'[^\s]*/(?=[\w.-]+\.py)')
 HORLOGE = re.compile(r'depends on the clock', re.I)
@@ -61,7 +62,12 @@ def normaliser(t):
     t = BARRE.sub(lambda m: 'BAR' + m.group(2).strip() + 'BAR', t)
     t = BARRE_NUE.sub('BAR', t)
     t = CHEMIN.sub('', t)
-    lignes = [l.rstrip() for l in t.split(chr(10))]
+    # L ALIGNEMENT depend de la largeur du terminal, pas de l exemple.
+    # On reduit les suites d espaces INTERNES et on garde l indentation.
+    def _serrer(l):
+        n = len(l) - len(l.lstrip(' '))
+        return l[:n] + re.sub(r' {2,}', ' ', l[n:])
+    lignes = [_serrer(l.rstrip()) for l in t.split(chr(10))]
     return chr(10).join(l for l in lignes if l.strip())
 
 
