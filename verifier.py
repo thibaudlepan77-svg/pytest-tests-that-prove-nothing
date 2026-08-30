@@ -12,10 +12,17 @@ comparing.
     plugins: ...                      what you happen to have installed
     cachedir: ...                     same
     ... in 0.03s                      durations
+    (the runner also clears __pycache__ before each case, because the
+    assertion rewrite warning only exists on the first run)
     file paths                        separators differ on Windows
     0x00007f...                       object addresses, never twice the same
     available fixtures: ...           depends on the plugins you installed
     column alignment                  pytest pads to your terminal width
+
+The runner also pins COLUMNS to 80, the width the outputs were captured at.
+pytest truncates its summary lines to fit the terminal, so a wider one
+prints text the capture never had. That is not something a comparison can
+paper over, so the width is fixed instead.
 
 Everything else is compared as is. That includes every PASSED, FAILED, ERROR,
 xfail, warning and assertion diff, which is the part that carries the lesson.
@@ -23,7 +30,7 @@ xfail, warning and assertion diff, which is the part that carries the lesson.
     python verifier.py            check everything
     python verifier.py -v         also print the first differing line
 """
-import io, os, re, subprocess, sys
+import io, os, re, shutil, subprocess, sys
 
 ROOT = os.path.dirname(os.path.abspath(__file__))
 BAVARD = '-v' in sys.argv
@@ -81,9 +88,20 @@ ok = diff = casse = varie = 0
 for d in sorted(cas()):
     args = [l for l in io.open(os.path.join(d, 'pytest-args.txt'), encoding='utf-8').read().split(chr(10)) if l.strip()]
     try:
+        # Le cache de reecriture rend la PREMIERE execution differente des
+        # suivantes, certains avertissements n existent qu a la reecriture.
+        for sous in ('__pycache__', '.pytest_cache'):
+            for base, dirs, _ in os.walk(d):
+                if os.path.basename(base) == sous:
+                    shutil.rmtree(base, ignore_errors=True)
+        env = dict(os.environ)
+        # pytest TRONQUE ses lignes pour tenir dans le terminal. Les sorties
+        # de ce depot ont ete capturees sur 80 colonnes, on impose la meme
+        # largeur, sinon la comparaison porte sur deux textes differents.
+        env['COLUMNS'] = '80'
         r = subprocess.run([sys.executable, '-m', 'pytest'] + args, cwd=d,
                            capture_output=True, text=True, encoding='utf-8',
-                           errors='replace', timeout=120)
+                           errors='replace', timeout=120, env=env)
     except Exception as e:
         print('BROKEN   ', os.path.relpath(d, ROOT), type(e).__name__)
         casse += 1
