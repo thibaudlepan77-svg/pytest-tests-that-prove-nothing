@@ -1,4 +1,6 @@
-# Skipping for a reason the machine can check
+# Pytest skip if condition
+
+_Skipping for a reason the machine can check._
 
 1 example. Every block below is a real pytest run on pytest 9.1 and
 Python 3.13, captured automatically.

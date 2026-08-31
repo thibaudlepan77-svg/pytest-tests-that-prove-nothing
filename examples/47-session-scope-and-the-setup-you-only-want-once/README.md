@@ -1,4 +1,6 @@
-# session scope, and the setup you only want once
+# Pytest fixture session scope
+
+_session scope, and the setup you only want once._
 
 1 example. Every block below is a real pytest run on pytest 9.1 and
 Python 3.13, captured automatically.

@@ -1,4 +1,6 @@
-# pytest.warns, and the warning you should turn into an error
+# Pytest warnings warn
+
+_pytest.warns, and the warning you should turn into an error._
 
 2 examples. Every block below is a real pytest run on pytest 9.1 and
 Python 3.13, captured automatically.

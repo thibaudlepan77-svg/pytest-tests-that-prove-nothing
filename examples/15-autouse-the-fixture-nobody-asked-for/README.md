@@ -1,4 +1,6 @@
-# autouse, the fixture nobody asked for
+# Pytest call fixture
+
+_autouse, the fixture nobody asked for._
 
 1 example. Every block below is a real pytest run on pytest 9.1 and
 Python 3.13, captured automatically.
